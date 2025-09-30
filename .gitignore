@@ -158,3 +158,12 @@ secrets.json
 keys.json
 credentials.json
 auth.json
+
+# Google Search Console (NE PAS PUBLIER - Sécurité)
+googlec7fbec737423d551.html
+public/googlec7fbec737423d551.html
+*.google-site-verification.html
+
+# Google Analytics & Search Console
+google*.html
+*-site-verification.html
