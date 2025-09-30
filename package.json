@@ -8,7 +8,12 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "build:seo": "vite build --mode production",
+    "analyze": "npx vite-bundle-analyzer dist",
+    "seo-check": "echo '🔍 Vérification SEO - Ouvrez https://anna-el.vercel.app dans votre navigateur et utilisez les outils de développement'",
+    "sitemap-check": "curl -s https://anna-el.vercel.app/sitemap.xml | head -20",
+    "robots-check": "curl -s https://anna-el.vercel.app/robots.txt"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
