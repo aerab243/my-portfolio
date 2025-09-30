@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "pages/api/contact.js": {
+      "runtime": "@vercel/node"
+    }
+  }
+}
