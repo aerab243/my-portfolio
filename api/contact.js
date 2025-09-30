@@ -1,8 +1,8 @@
-import { Resend } from 'resend';
+const { Resend } = require('resend');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Log pour débogage
   console.log('Requête reçue:', req.method);
   console.log('Variables env:', {
