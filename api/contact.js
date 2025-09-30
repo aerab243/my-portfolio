@@ -1,8 +1,15 @@
 const { Resend } = require('resend');
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 module.exports = async function handler(req, res) {
+  // CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   // Log pour débogage
   console.log('Requête reçue:', req.method);
   console.log('Variables env:', {
@@ -19,27 +26,34 @@ module.exports = async function handler(req, res) {
 
     // Validation
     if (!name || !email || !subject || !message) {
+      console.log('Validation échouée - champs manquants');
       return res.status(400).json({ message: 'Tous les champs sont requis' });
     }
 
     // Validation email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+      console.log('Validation échouée - email invalide:', email);
       return res.status(400).json({ message: 'Email invalide' });
     }
 
     // Vérifier la clé API
     if (!process.env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY manquante');
-      return res.status(500).json({ message: 'Configuration serveur incomplète' });
+      return res.status(500).json({ 
+        message: 'Configuration serveur incomplète - RESEND_API_KEY manquante' 
+      });
     }
 
-    console.log('Tentative d\'envoi d\'email...');
+    console.log('Initialisation de Resend...');
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    console.log('Tentative envoi email...');
 
     // Envoi de l'email
     const { data, error } = await resend.emails.send({
-      from: 'Portfolio Contact <portfolio@resend.dev>',
-      to: process.env.CONTACT_EMAIL || 'ag.rabenandrasana@example.com',
+      from: 'Portfolio Contact <onboarding@resend.dev>',
+      to: process.env.CONTACT_EMAIL || 'aerabenandrasana@gmail.com',
       subject: `Nouveau message depuis le portfolio: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -63,18 +77,21 @@ module.exports = async function handler(req, res) {
     if (error) {
       console.error('Erreur Resend détaillée:', error);
       return res.status(500).json({
-        message: 'Erreur lors de l\'envoi de l\'email',
-        details: error.message
+        message: 'Erreur lors de envoi email',
+        details: error.message || 'Erreur inconnue de Resend'
       });
     }
 
     console.log('Email envoyé avec succès:', data);
-    res.status(200).json({ message: 'Message envoyé avec succès' });
+    res.status(200).json({ 
+      message: 'Message envoyé avec succès',
+      id: data?.id || 'unknown'
+    });
   } catch (error) {
     console.error('Erreur serveur détaillée:', error);
     res.status(500).json({
       message: 'Erreur serveur',
-      details: error.message
+      details: error.message || 'Erreur inconnue'
     });
   }
-}
+};

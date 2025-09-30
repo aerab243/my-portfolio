@@ -10,9 +10,9 @@ async function testProductionAPI() {
   try {
     console.log('🚀 Test de l\'API contact en PRODUCTION...');
     console.log('📤 Données de test:', testData);
-    console.log('🌐 URL: https://my-portfolio-knhizceun-arcan7s-projects.vercel.app/api/contact');
+    console.log('🌐 URL: https://my-portfolio-qufnyw19d-arcan7s-projects.vercel.app/api/contact');
 
-    const response = await fetch('https://my-portfolio-knhizceun-arcan7s-projects.vercel.app/api/contact', {
+    const response = await fetch('https://my-portfolio-qufnyw19d-arcan7s-projects.vercel.app/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
