@@ -237,7 +237,7 @@ Ce projet est sous licence MIT.
 ## 👤 Auteur
 
 **Anna-el Gerard RABENANDRASANA**
-*Développeur Full-Stack*
+*Développeur Full-Stack | Toamasina, Madagascar*
 
 ### 📬 Contact
 
@@ -248,13 +248,14 @@ Ce projet est sous licence MIT.
 
 ### 💼 À Propos
 
-Spécialisé dans le développement d'applications web modernes avec React, TypeScript, et les technologies cloud. Passionné par l'UX/UI et l'optimisation des performances.
+Spécialisé dans le développement d'applications web modernes avec React, TypeScript, et les technologies cloud. Développeur Full-Stack basé à **Toamasina, Madagascar**, passionné par l'UX/UI et l'optimisation des performances.
 
 **Compétences principales** :
 - Frontend : React, TypeScript, Tailwind CSS
 - Backend : Node.js, API REST, Serverless
 - Cloud : Vercel, Supabase
 - Outils : Git, Vite, ESLint
+- Localisation : Toamasina, Madagascar
 
 ---
 

@@ -32,13 +32,13 @@ function App() {
   // SEO: Update page title based on current section
   useEffect(() => {
     const sectionTitles = {
-      home: 'Anna-el Gerard RABENANDRASANA - Développeur Full-Stack | Portfolio React TypeScript',
-      about: 'À Propos - Anna-el Gerard RABENANDRASANA | Développeur Full-Stack',
-      skills: 'Compétences Techniques - React, TypeScript, Node.js | Portfolio Anna-el',
-      experience: 'Expérience Professionnelle - Développeur Full-Stack | Anna-el Gerard',
-      projects: 'Projets - Portfolio Développeur Web | Anna-el Gerard RABENANDRASANA',
-      certifications: 'Certifications - Développeur Full-Stack | Anna-el Gerard',
-      contact: 'Contact - Anna-el Gerard RABENANDRASANA | Développeur Full-Stack'
+      home: 'Anna-el Gerard RABENANDRASANA - Développeur Full-Stack | Toamasina, Madagascar',
+      about: 'À Propos - Anna-el Gerard RABENANDRASANA | Développeur Full-Stack | Toamasina',
+      skills: 'Compétences Techniques - React, TypeScript, Node.js | Portfolio Anna-el | Madagascar',
+      experience: 'Expérience Professionnelle - Développeur Full-Stack | Anna-el Gerard | Toamasina',
+      projects: 'Projets - Portfolio Développeur Web | Anna-el Gerard RABENANDRASANA | Madagascar',
+      certifications: 'Certifications - Développeur Full-Stack | Anna-el Gerard | Toamasina',
+      contact: 'Contact - Anna-el Gerard RABENANDRASANA | Développeur Full-Stack | Madagascar'
     };
 
     document.title = sectionTitles[currentSection as keyof typeof sectionTitles] ||
@@ -47,13 +47,13 @@ function App() {
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     const descriptions = {
-      home: 'Portfolio professionnel d\'Anna-el Gerard RABENANDRASANA, développeur Full-Stack spécialisé en React, TypeScript, Node.js. Découvrez mes projets, compétences et expériences.',
-      about: 'Découvrez le parcours d\'Anna-el Gerard RABENANDRASANA, développeur Full-Stack passionné par les technologies modernes et l\'innovation digitale.',
-      skills: 'Compétences techniques d\'Anna-el Gerard RABENANDRASANA : React, TypeScript, Node.js, Tailwind CSS, et bien plus encore.',
-      experience: 'Expérience professionnelle d\'Anna-el Gerard RABENANDRASANA en développement web et Full-Stack.',
-      projects: 'Découvrez les projets développés par Anna-el Gerard RABENANDRASANA, développeur Full-Stack.',
-      certifications: 'Certifications et formations d\'Anna-el Gerard RABENANDRASANA en développement web.',
-      contact: 'Contactez Anna-el Gerard RABENANDRASANA pour vos projets de développement web.'
+      home: 'Portfolio professionnel d\'Anna-el Gerard RABENANDRASANA, développeur Full-Stack basé à Toamasina, Madagascar. Découvrez mes projets, compétences et expériences en développement web moderne.',
+      about: 'Découvrez le parcours d\'Anna-el Gerard RABENANDRASANA, développeur Full-Stack basé à Toamasina, Madagascar. Passionné par les technologies modernes et l\'innovation digitale.',
+      skills: 'Compétences techniques d\'Anna-el Gerard RABENANDRASANA, développeur Full-Stack à Toamasina, Madagascar : React, TypeScript, Node.js, Tailwind CSS, et bien plus encore.',
+      experience: 'Expérience professionnelle d\'Anna-el Gerard RABENANDRASANA en développement web et Full-Stack. Développeur basé à Toamasina, Madagascar.',
+      projects: 'Découvrez les projets développés par Anna-el Gerard RABENANDRASANA, développeur Full-Stack basé à Toamasina, Madagascar.',
+      certifications: 'Certifications et formations d\'Anna-el Gerard RABENANDRASANA en développement web. Développeur Full-Stack à Toamasina, Madagascar.',
+      contact: 'Contactez Anna-el Gerard RABENANDRASANA, développeur Full-Stack basé à Toamasina, Madagascar pour vos projets de développement web.'
     };
 
     if (metaDescription) {
