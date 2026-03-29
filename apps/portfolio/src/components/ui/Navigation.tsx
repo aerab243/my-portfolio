@@ -3,9 +3,11 @@
 import { useState, useEffect } from 'react';
 
 const navItems = [
-  { href: '#projects', label: 'Projets' },
+  { href: '#about', label: 'À propos' },
   { href: '#skills', label: 'Compétences' },
-  { href: '#blog', label: 'Blog' },
+  { href: '#experience', label: 'Expérience' },
+  { href: '#certifications', label: 'Certifications' },
+  { href: '#projects', label: 'Projets' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -34,7 +36,7 @@ export function Navigation() {
           href="#"
           className="text-xl font-bold text-zinc-50 hover:text-indigo-400 transition-colors"
         >
-          {'<Portfolio />'}
+          AGR
         </a>
 
         <div className="hidden md:flex items-center gap-8">
