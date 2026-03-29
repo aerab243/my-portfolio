@@ -36,13 +36,13 @@ export function ExperienceSection() {
     >
       <div className="max-w-4xl mx-auto">
         <div className="mb-16 text-center">
-          <p className="exp-animate text-sm font-mono text-indigo-400 mb-2 tracking-wider">
+          <p className="exp-animate text-sm font-mono text-accent mb-2 tracking-wider">
             03 — Expérience
           </p>
-          <h2 className="exp-animate text-4xl md:text-5xl font-bold text-zinc-50 mb-4">
+          <h2 className="exp-animate text-4xl md:text-5xl font-bold text-foreground mb-4">
             Parcours professionnel
           </h2>
-          <p className="exp-animate text-zinc-400 max-w-2xl mx-auto">
+          <p className="exp-animate text-foreground-muted max-w-2xl mx-auto">
             Mon parcours professionnel et les réalisations marquantes
           </p>
         </div>
@@ -51,24 +51,24 @@ export function ExperienceSection() {
           {experiences.map((exp, index) => (
             <div
               key={exp.id}
-              className="exp-animate relative pl-8 border-l-2 border-zinc-800"
+              className="exp-animate relative pl-8 border-l-2 border-border"
             >
-              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-indigo-500 border-4 border-zinc-900" />
-              
-              <div className="bg-zinc-900/30 rounded-xl p-6 border border-zinc-800 hover:border-zinc-700 transition-colors">
+              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-accent border-4 border-background" />
+
+              <div className="bg-background-secondary rounded-xl p-6 border border-border hover:border-border-light transition-colors">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                  <h3 className="text-xl font-bold text-zinc-50">{exp.title}</h3>
-                  <span className="text-sm font-mono text-indigo-400">
+                  <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
+                  <span className="text-sm font-mono text-accent">
                     {exp.startDate} – {exp.endDate}
                   </span>
                 </div>
-                
-                <p className="text-indigo-400 mb-4">{exp.company} · {exp.location}</p>
-                
+
+                <p className="text-accent mb-4">{exp.company} · {exp.location}</p>
+
                 <ul className="space-y-2">
                   {exp.description.map((item, i) => (
-                    <li key={i} className="text-zinc-400 text-sm flex items-start gap-2">
-                      <span className="text-indigo-500 mt-1.5">▹</span>
+                    <li key={i} className="text-foreground-muted text-sm flex items-start gap-2">
+                      <span className="text-accent mt-1.5">▹</span>
                       {item}
                     </li>
                   ))}

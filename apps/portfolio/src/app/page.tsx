@@ -43,8 +43,8 @@ export default function Home() {
       </main>
       
       {/* Footer */}
-      <footer className="relative z-10 py-8 border-t border-zinc-800/50">
-        <div className="max-w-6xl mx-auto px-6 text-center text-sm text-zinc-500">
+      <footer className="relative z-10 py-8 border-t border-border">
+        <div className="max-w-6xl mx-auto px-6 text-center text-sm text-foreground-muted">
           © {new Date().getFullYear()} Anna-el Gerard RABENANDRASANA. Tous droits réservés. Créé avec Next.js & React
         </div>
       </footer>

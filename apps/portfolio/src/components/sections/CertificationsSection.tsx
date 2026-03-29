@@ -36,13 +36,13 @@ export function CertificationsSection() {
     >
       <div className="max-w-4xl mx-auto">
         <div className="mb-16 text-center">
-          <p className="cert-animate text-sm font-mono text-indigo-400 mb-2 tracking-wider">
+          <p className="cert-animate text-sm font-mono text-accent mb-2 tracking-wider">
             04 — Certifications
           </p>
-          <h2 className="cert-animate text-4xl md:text-5xl font-bold text-zinc-50 mb-4">
+          <h2 className="cert-animate text-4xl md:text-5xl font-bold text-foreground mb-4">
             Certifications & Formations
           </h2>
-          <p className="cert-animate text-zinc-400 max-w-2xl mx-auto">
+          <p className="cert-animate text-foreground-muted max-w-2xl mx-auto">
             Certifications professionnelles validant mes compétences techniques
           </p>
         </div>
@@ -51,23 +51,23 @@ export function CertificationsSection() {
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="cert-animate group bg-zinc-900/30 rounded-xl p-6 border border-zinc-800 hover:border-indigo-500/50 transition-all duration-300"
+              className="cert-animate group bg-background-secondary rounded-xl p-6 border border-border hover:border-accent/50 transition-all duration-300"
             >
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-zinc-50 mb-1 group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-accent transition-colors">
                     {cert.name}
                   </h3>
-                  <p className="text-zinc-400 text-sm">
+                  <p className="text-foreground-muted text-sm">
                     {cert.institution} · {cert.year}
                   </p>
                   {cert.credentialId && (
-                    <p className="text-zinc-500 text-xs mt-2 font-mono">
+                    <p className="text-foreground-muted/60 text-xs mt-2 font-mono">
                       ID: {cert.credentialId}
                     </p>
                   )}
                 </div>
-                <div className="flex items-center gap-2 text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>

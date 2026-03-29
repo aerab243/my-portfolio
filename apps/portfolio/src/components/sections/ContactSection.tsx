@@ -74,20 +74,20 @@ export function ContactSection() {
     >
       <div className="max-w-2xl mx-auto">
         <div className="mb-12 text-center">
-          <p className="contact-animate text-sm font-mono text-indigo-400 mb-2 tracking-wider">
+          <p className="contact-animate text-sm font-mono text-accent mb-2 tracking-wider">
             05 — Contact
           </p>
-          <h2 className="contact-animate text-4xl md:text-5xl font-bold text-zinc-50 mb-4">
+          <h2 className="contact-animate text-4xl md:text-5xl font-bold text-foreground mb-4">
             Let's work together
           </h2>
-          <p className="contact-animate text-zinc-400">
+          <p className="contact-animate text-foreground-muted">
             Un projet en tête ? N'hésitez pas à me contacter.
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="contact-animate">
-            <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-foreground-secondary mb-2">
               Nom
             </label>
             <input
@@ -95,14 +95,14 @@ export function ContactSection() {
               id="name"
               value={formState.name}
               onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-zinc-50 placeholder-zinc-500 focus:outline-none focus:border-indigo-500 transition-colors"
+              className="w-full px-4 py-3 rounded-xl bg-background-secondary border border-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors"
               placeholder="Votre nom"
               required
             />
           </div>
 
           <div className="contact-animate">
-            <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-foreground-secondary mb-2">
               Email
             </label>
             <input
@@ -110,14 +110,14 @@ export function ContactSection() {
               id="email"
               value={formState.email}
               onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-              className="w-full px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-zinc-50 placeholder-zinc-500 focus:outline-none focus:border-indigo-500 transition-colors"
+              className="w-full px-4 py-3 rounded-xl bg-background-secondary border border-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors"
               placeholder="vous@exemple.com"
               required
             />
           </div>
 
           <div className="contact-animate">
-            <label htmlFor="message" className="block text-sm font-medium text-zinc-300 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-foreground-secondary mb-2">
               Message
             </label>
             <textarea
@@ -125,7 +125,7 @@ export function ContactSection() {
               value={formState.message}
               onChange={(e) => setFormState({ ...formState, message: e.target.value })}
               rows={5}
-              className="w-full px-4 py-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-zinc-50 placeholder-zinc-500 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
+              className="w-full px-4 py-3 rounded-xl bg-background-secondary border border-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors resize-none"
               placeholder="Décrivez votre projet..."
               required
             />
@@ -139,8 +139,8 @@ export function ContactSection() {
                 ? 'bg-red-600 hover:bg-red-500'
                 : status === 'sent'
                 ? 'bg-green-600 hover:bg-green-500'
-                : 'bg-indigo-600 hover:bg-indigo-500 hover:shadow-lg hover:shadow-indigo-500/25'
-            } disabled:bg-indigo-600/50 text-white`}
+                : 'bg-accent hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/25'
+            } disabled:bg-accent/50 text-white`}
           >
             {status === 'sending' ? (
               <span className="flex items-center justify-center gap-2">
@@ -169,7 +169,7 @@ export function ContactSection() {
         <div className="contact-animate mt-12 flex justify-center gap-6">
           <a
             href="mailto:aerabenandrasana@gmail.com"
-            className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 transition-all"
+            className="p-3 rounded-xl bg-background-secondary border border-border text-foreground-secondary hover:text-foreground hover:border-border-light transition-all"
             aria-label="Email"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -178,7 +178,7 @@ export function ContactSection() {
           </a>
           <a
             href="tel:+261371121114"
-            className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 transition-all"
+            className="p-3 rounded-xl bg-background-secondary border border-border text-foreground-secondary hover:text-foreground hover:border-border-light transition-all"
             aria-label="Téléphone"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,7 +189,7 @@ export function ContactSection() {
             href="https://github.com/aerabenandrasana"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 transition-all"
+            className="p-3 rounded-xl bg-background-secondary border border-border text-foreground-secondary hover:text-foreground hover:border-border-light transition-all"
             aria-label="GitHub"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -200,7 +200,7 @@ export function ContactSection() {
             href="https://linkedin.com/in/aerabenandrasana"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800 text-zinc-400 hover:text-zinc-50 hover:border-zinc-700 transition-all"
+            className="p-3 rounded-xl bg-background-secondary border border-border text-foreground-secondary hover:text-foreground hover:border-border-light transition-all"
             aria-label="LinkedIn"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -209,7 +209,7 @@ export function ContactSection() {
           </a>
         </div>
 
-        <p className="contact-animate mt-8 text-center text-zinc-500 text-sm">
+        <p className="contact-animate mt-8 text-center text-foreground-muted text-sm">
           📍 Toamasina, Madagascar
         </p>
       </div>

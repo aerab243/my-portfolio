@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body
-        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans bg-white dark:bg-[#0a0a0f] text-zinc-900 dark:text-zinc-50 transition-colors duration-300`}
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans bg-background text-foreground transition-colors duration-300`}
       >
         <ThemeProvider>
           {children}

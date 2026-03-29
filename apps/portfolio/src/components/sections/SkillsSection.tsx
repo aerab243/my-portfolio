@@ -48,10 +48,10 @@ export function SkillsSection() {
     >
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <p className="text-sm font-mono text-indigo-400 mb-2 tracking-wider">
+          <p className="text-sm font-mono text-accent mb-2 tracking-wider">
             03 — Compétences
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-zinc-50">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             Stack technique
           </h2>
         </div>
@@ -60,7 +60,7 @@ export function SkillsSection() {
           {skillCategories.map((cat) => (
             <span
               key={cat}
-              className="category-badge px-4 py-2 rounded-full bg-indigo-500/10 text-indigo-400 text-sm font-medium"
+              className="category-badge px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium"
             >
               {cat}
             </span>
@@ -71,10 +71,10 @@ export function SkillsSection() {
           {skills.map((skill) => (
             <div key={skill.name} className="skill-item">
               <div className="flex justify-between mb-2">
-                <span className="text-zinc-200 font-medium">{skill.name}</span>
-                <span className="text-zinc-500 text-sm">{skill.level}%</span>
+                <span className="text-foreground-secondary font-medium">{skill.name}</span>
+                <span className="text-foreground-muted text-sm">{skill.level}%</span>
               </div>
-              <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
+              <div className="h-2 bg-background-tertiary rounded-full overflow-hidden">
                 <div
                   className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000"
                   style={{ width: `${skill.level}%` }}

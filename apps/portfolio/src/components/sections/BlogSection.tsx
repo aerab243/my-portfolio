@@ -72,16 +72,16 @@ export function BlogSection() {
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 flex items-end justify-between">
           <div>
-            <p className="blog-animate text-sm font-mono text-indigo-400 mb-2 tracking-wider">
+            <p className="blog-animate text-sm font-mono text-accent mb-2 tracking-wider">
               04 — Blog
             </p>
-            <h2 className="blog-animate text-4xl md:text-5xl font-bold text-zinc-50">
+            <h2 className="blog-animate text-4xl md:text-5xl font-bold text-foreground">
               Latest articles
             </h2>
           </div>
           <a
             href="/blog"
-            className="blog-animate hidden md:flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors"
+            className="blog-animate hidden md:flex items-center gap-2 text-accent hover:text-accent/80 transition-colors"
           >
             Voir tous
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,23 +95,23 @@ export function BlogSection() {
             <a
               key={post.id}
               href={`/blog/${post.slug}`}
-              className="blog-animate group block p-8 rounded-2xl bg-zinc-900/30 border border-zinc-800/50 hover:border-indigo-500/30 transition-all duration-300"
+              className="blog-animate group block p-8 rounded-2xl bg-background-secondary border border-border hover:border-accent/30 transition-all duration-300"
             >
-              <div className="flex items-center gap-4 text-sm text-zinc-500 mb-4">
+              <div className="flex items-center gap-4 text-sm text-foreground-muted mb-4">
                 <span>{post.date}</span>
-                <span className="w-1 h-1 rounded-full bg-zinc-600" />
+                <span className="w-1 h-1 rounded-full bg-foreground-muted/40" />
                 <span>{post.readTime}</span>
               </div>
-              
-              <h3 className="text-xl font-semibold text-zinc-100 mb-3 group-hover:text-indigo-400 transition-colors">
+
+              <h3 className="text-xl font-semibold text-foreground-secondary mb-3 group-hover:text-accent transition-colors">
                 {post.title}
               </h3>
-              
-              <p className="text-zinc-400 leading-relaxed">
+
+              <p className="text-foreground-muted leading-relaxed">
                 {post.excerpt}
               </p>
-              
-              <div className="mt-6 flex items-center gap-2 text-sm text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity">
+
+              <div className="mt-6 flex items-center gap-2 text-sm text-accent opacity-0 group-hover:opacity-100 transition-opacity">
                 Lire l'article
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -123,7 +123,7 @@ export function BlogSection() {
 
         <a
           href="/blog"
-          className="blog-animate mt-8 md:hidden flex items-center justify-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors"
+          className="blog-animate mt-8 md:hidden flex items-center justify-center gap-2 text-accent hover:text-accent/80 transition-colors"
         >
           Voir tous les articles
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -83,7 +83,7 @@ Le futur du web est immersif. Commencez dès aujourd'hui!
       <div className="max-w-3xl mx-auto">
         <Link
           href="/#blog"
-          className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-50 mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-foreground-muted hover:text-foreground mb-8 transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -93,16 +93,16 @@ Le futur du web est immersif. Commencez dès aujourd'hui!
 
         <article>
           <header className="mb-12">
-            <p className="text-indigo-400 text-sm mb-4">
+            <p className="text-accent text-sm mb-4">
               {post.date} · {post.readTime}
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold text-zinc-50 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
               {post.title}
             </h1>
           </header>
 
           <div className="prose prose-invert prose-lg max-w-none">
-            <div className="text-zinc-300 leading-relaxed whitespace-pre-wrap">
+            <div className="text-foreground-secondary leading-relaxed whitespace-pre-wrap">
               {post.content}
             </div>
           </div>
